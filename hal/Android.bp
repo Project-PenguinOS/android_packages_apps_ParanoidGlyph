@@ -1,0 +1,19 @@
+//
+// SPDX-FileCopyrightText: PenguinOS
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "android.hardware.light-service.glyph",
+    relative_install_path: "hw",
+    init_rc: ["android.hardware.light-service.glyph.rc"],
+    vintf_fragments: ["android.hardware.light-service.glyph.xml"],
+    vendor: true,
+    overrides: ["vendor.qti.hardware.lights.service"],
+    srcs: ["Lights.cpp"],
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "android.hardware.light-V2-ndk",
+    ],
+}

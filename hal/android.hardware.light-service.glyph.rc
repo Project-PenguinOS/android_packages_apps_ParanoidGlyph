@@ -1,0 +1,5 @@
+service vendor.light-glyph /vendor/bin/hw/android.hardware.light-service.glyph
+    class hal
+    user system
+    group system
+    shutdown critical
