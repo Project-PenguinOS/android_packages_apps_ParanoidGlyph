@@ -48,6 +48,8 @@ class Lights : public BnLights {
                     case kCountdownOn:
                         setAll(true);
                         break;
+                    // LightsService clears a light to 0 when the camera's session goes away.
+                    case 0:
                     case kFillOff:
                     case kCountdownOff:
                         setAll(false);
